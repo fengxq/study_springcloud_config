@@ -27,14 +27,14 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
-logging:
-  path: logs
-  file:
-    file: /study_springcloud_pay.log
-    file.max-size: 100MB
-    file.max-history: 10
-  level:
-    root: debug
+#logging:
+#  path: logs
+#  file:
+#    file: /study_springcloud_pay.log
+#    file.max-size: 100MB
+#    file.max-history: 10
+#  level:
+#    root: debug
 
 config:
   test: test1
