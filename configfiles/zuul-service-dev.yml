@@ -2,20 +2,21 @@ server:
   port: 18765
   servlet:
     context-path: /zuulService
+
 spring:
   profiles:
     active: dev
-    application:
-      name: zuul-service
-    cloud:
-      config:
-        uri: http://localhost:8760/configService
-        profile: dev
-        label: master
-        fail-fast: true
-        name: ${spring.application.name}
-        username: user
-        password: fxq
+  application:
+    name: zuul-service
+  cloud:
+    config:
+      uri: http://localhost:8760/configService
+      profile: dev
+      label: master
+      fail-fast: true
+      name: ${spring.application.name}
+      username: user
+      password: fxq
 eureka:
   client:
     service-url:
@@ -31,5 +32,5 @@ logging:
 zuul:
   routes:
     user:
-      path: zuul/user/*
-      serviceId: http://localhost:8762/userService
+      path: /zuulRoutes/user/**
+      serviceId: user-service
