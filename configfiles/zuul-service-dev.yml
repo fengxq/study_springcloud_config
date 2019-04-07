@@ -31,5 +31,5 @@ logging:
 zuul:
   routes:
     user:
-      path: zuul/usesr/*
+      path: zuul/user/*
       serviceId: user-service
