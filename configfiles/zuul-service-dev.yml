@@ -1,0 +1,30 @@
+server:
+  port: 18765
+  servlet:
+    context-path: /zuulService
+spring:
+  profiles:
+    active: dev
+    application:
+      name: zuul-service
+    cloud:
+      config:
+        uri: http://localhost:8760/configService
+        profile: dev
+        label: master
+        fail-fast: true
+        name: ${spring.application.name}
+        username: user
+        password: fxq
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+  path: logs
+  file:
+    file: /study_springcloud_zuul.log
+    file.max-size: 100MB
+    file.max-history: 10
+  level:
+    root: info
