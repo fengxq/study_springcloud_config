@@ -28,3 +28,8 @@ logging:
     file.max-history: 10
   level:
     root: info
+zuul:
+  routes:
+    user:
+      path: zuul/usesr/*
+      serviceId: user-service
