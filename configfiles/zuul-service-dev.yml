@@ -32,4 +32,4 @@ zuul:
   routes:
     user:
       path: zuul/user/*
-      serviceId: user-service
+      serviceId: http://localhost:8762/userService
