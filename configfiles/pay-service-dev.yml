@@ -45,7 +45,7 @@ logging:
     root: info
 
 config:
-  test: test0
+  test: test01
 
 management:
   endpoints:
