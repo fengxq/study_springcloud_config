@@ -10,10 +10,10 @@ spring:
     name: pay-service
   cloud:
     config:
-      #      discovery:
-      #        enabled: true
-      #        service-id: config-service
-      uri: http://localhost:8760/configService
+      discovery:
+        enabled: true
+        service-id: config-service
+#      uri: http://localhost:8760/configService
       profile: dev
       label: master
       fail-fast: true
