@@ -18,8 +18,8 @@ spring:
       label: master
       fail-fast: true
       name: ${spring.application.name}
-      username: user
-      password: fxq
+  #      username: user
+  #      password: fxq
   rabbitmq:
     host: localhost
     port: 5672
